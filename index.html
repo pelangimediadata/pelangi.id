@@ -10,10 +10,12 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="container nav-flex">
         <div class="logo">
-            <img src="img/logo.png" alt="Logo" class="logo-img">
+            <img src="img/logo.png" alt="Logo PELANGINET" class="logo-img">
+            PELANGI<span>NET</span>
         </div>
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
@@ -22,16 +24,20 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#home" onclick="tutupMenu()">Beranda</a></li>
-            <li><a href="#fitur" onclick="tutupMenu()">Keunggulan</a></li>
-            <li><a href="#paket" onclick="tutupMenu()">Paket</a></li>
-            <li><a href="#profil" onclick="tutupMenu()">Profil</a></li>
+            <li><a href="#home" onclick="tutupMenu(); tutupClientArea();">Beranda</a></li>
+            <li><a href="#fitur" onclick="tutupMenu(); tutupClientArea();">Keunggulan</a></li>
+            <li><a href="#paket" onclick="tutupMenu(); tutupClientArea();">Paket</a></li>
+            <li><a href="#profil" onclick="tutupMenu(); tutupClientArea();">Profil</a></li>
+            <li><a href="javascript:void(0)" class="btn-client" onclick="bukaClientArea()">Client Area</a></li>
             <li><a href="javascript:void(0)" class="btn-nav" onclick="bukaPendaftaran('Umum')">Daftar Sekarang</a></li>
         </ul>
     </div>
 </nav>
 
+<!-- KONTEN UTAMA WEBSITE -->
 <div id="main-content">
+    
+    <!-- HERO SECTION -->
     <header id="home" class="hero">
         <div class="container hero-flex">
             <div class="hero-slider-container">
@@ -53,6 +59,7 @@
         </div>
     </header>
 
+    <!-- PROMO SLIDER SECTION -->
     <section class="promo-slider-section">
         <div class="container">
             <div class="promo-wrapper">
@@ -78,6 +85,7 @@
         </div>
     </section>
 
+    <!-- KEUNGGULAN SECTION -->
     <section id="fitur" class="features-grid container section">
         <div class="feature-item">
             <i class="fas fa-infinity"></i>
@@ -96,6 +104,7 @@
         </div>
     </section>
 
+    <!-- PAKET INTERNET SECTION -->
     <section id="paket" class="section">
         <div class="container">
             <h2 class="section-title">Pilih Paket Internet</h2>
@@ -106,13 +115,14 @@
                 </div>
             </div>
 
+            <!-- TAB 1: PAKET RUMAH -->
             <div id="paket-rumah" class="tab-content active">
                 <div class="grid-pricing">
                     <div class="card">
                         <img src="img/paket-1.jpg" alt="Lite" class="card-img">
                         <h3>PELANGI Lite</h3>
-                        <div class="speed">7 <span>Mbps</span></div>
-                        <div class="price">Rp 100.000 <span>/bln</span></div>
+                        <div class="speed">5 <span>Mbps</span></div>
+                        <div class="price">Rp 120.000 <span>/bln</span></div>
                         <ul class="card-features">
                             <li><i class="fas fa-check"></i> Tanpa Batas Kuota (FUP)</li>
                             <li><i class="fas fa-check"></i> Ideal 1-3 Perangkat</li>
@@ -125,7 +135,7 @@
                         <div class="badge">TERLARIS</div>
                         <img src="img/paket-2.jpg" alt="Prime" class="card-img">
                         <h3>PELANGI Prime</h3>
-                        <div class="speed">15 <span>Mbps</span></div>
+                        <div class="speed">7 <span>Mbps</span></div>
                         <div class="price">Rp 150.000 <span>/bln</span></div>
                         <ul class="card-features">
                             <li><i class="fas fa-check"></i> Tanpa Batas Kuota (FUP)</li>
@@ -138,7 +148,7 @@
                     <div class="card">
                         <img src="img/paket-3.jpg" alt="Pro" class="card-img">
                         <h3>PELANGI Pro</h3>
-                        <div class="speed">20 <span>Mbps</span></div>
+                        <div class="speed">10 <span>Mbps</span></div>
                         <div class="price">Rp 175.000 <span>/bln</span></div>
                         <ul class="card-features">
                             <li><i class="fas fa-check"></i> Tanpa Batas Kuota (FUP)</li>
@@ -150,6 +160,7 @@
                 </div>
             </div>
 
+            <!-- TAB 2: PAKET VOUCHER -->
             <div id="paket-voucher" class="tab-content">
                 <div class="grid-pricing">
                     <div class="card">
@@ -181,38 +192,40 @@
         </div>
     </section>
 
-	<section id="profil" class="about-section">
-		<div class="container about-container">
-			<div class="about-content">
-				<!-- Bagian ini sudah diganti dari teks menjadi gambar logo -->
-				<div class="about-logo-wrapper">
-					<p class="about-lead">Menghubungkan Pelosok, Membangun Masa Depan Digital Desa.</p>
-					<img src="img/logo1.png" alt="Logo PELANGINET" class="about-logo-img">
-				</div>
-				<p>Kami adalah penyedia layanan internet (ISP) mikro yang berfokus pada pemerataan akses informasi digital di wilayah pedesaan dan pelosok.</p>
-				<div class="mission-grid">
-					<div class="mission-item">
-						<i class="fas fa-bullseye"></i>
-						<h4>Visi</h4>
-						<p>Menjadi jembatan digital terpercaya.</p>
-					</div>
-					<div class="mission-item">
-						<i class="fas fa-rocket"></i>
-						<h4>Misi</h4>
-						<p>Infrastruktur fiber optik harga terjangkau.</p>
-					</div>
-				</div>
-			</div>
-			<div class="about-stats">
-				<div class="card"><h3>10+</h3><p>Desa</p></div>
-				<div class="card"><h3>500+</h3><p>Pelanggan</p></div>
-				<div class="card"><h3>24/7</h3><p>Dukungan Teknis</p></div>
-				<div class="card"><h3>99%</h3><p>Uptime Koneksi</p></div>
-			</div>
-		</div>
-	</section>
+    <!-- TENTANG KAMI SECTION (Ganti Judul Teks Jadi Gambar Logo) -->
+    <section id="profil" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <div class="about-logo-wrapper">
+                    <span class="about-title-prefix">Tentang</span>
+                    <img src="img/logo.png" alt="Logo PELANGINET" class="about-logo-img">
+                </div>
+                <p class="about-lead">Menghubungkan Pelosok, Membangun Masa Depan Digital Desa.</p>
+                <p>PELANGINET adalah penyedia layanan internet (ISP) mikro yang berfokus pada pemerataan akses informasi digital di wilayah pedesaan dan pelosok.</p>
+                <div class="mission-grid">
+                    <div class="mission-item">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Visi</h4>
+                        <p>Menjadi jembatan digital terpercaya.</p>
+                    </div>
+                    <div class="mission-item">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Misi</h4>
+                        <p>Infrastruktur fiber optik harga terjangkau.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="card"><h3>10+</h3><p>Desa</p></div>
+                <div class="card"><h3>500+</h3><p>Pelanggan</p></div>
+                <div class="card"><h3>24/7</h3><p>Dukungan Teknis</p></div>
+                <div class="card"><h3>99%</h3><p>Uptime Koneksi</p></div>
+            </div>
+        </div>
+    </section>
 </div>
 
+<!-- FORMULIR PENDAFTARAN (HIDDEN BY DEFAULT) -->
 <section id="halaman-daftar" class="section" style="display: none;">
     <div class="container">
         <div class="form-container">
@@ -237,12 +250,103 @@
     </div>
 </section>
 
+<!-- SECTION CLIENT AREA (PORTAL PELANGGAN) -->
+<section id="halaman-client" class="section" style="display: none;">
+    <div class="container">
+        
+        <!-- FORM LOGIN CLIENT -->
+        <div id="login-client-card" class="client-card">
+            <button class="btn-back" onclick="tutupClientArea()"><i class="fas fa-arrow-left"></i> Kembali</button>
+            <div class="client-header">
+                <img src="img/logo.png" alt="PELANGINET" class="client-logo">
+                <h2>Portal Pelanggan</h2>
+                <p>Masukkan ID Pelanggan Anda untuk mengelola layanan</p>
+            </div>
+            <form id="formLoginClient" onsubmit="prosesLoginClient(event)">
+                <div class="form-group">
+                    <label for="idPelanggan">ID Pelanggan / Nomor Layanan</label>
+                    <input type="text" id="idPelanggan" placeholder="Contoh: PLG-10293" required>
+                </div>
+                <div class="form-group">
+                    <label for="passClient">Kata Sandi / PIN Area</label>
+                    <input type="password" id="passClient" placeholder="Masukkan kata sandi" required>
+                </div>
+                <button type="submit" class="btn-submit">Masuk ke Portal</button>
+            </form>
+        </div>
+
+        <!-- DASHBOARD CLIENT (INTEGRASI MIXRADIUS UI) -->
+        <div id="dashboard-client" class="dashboard-wrapper" style="display: none;">
+            <div class="dash-topbar">
+                <div>
+                    <span class="welcome-text">Selamat Datang,</span>
+                    <h3 id="dashNamaUser">Budi Santoso</h3>
+                    <small id="dashIdUser">ID: PLG-10293</small>
+                </div>
+                <button class="btn-logout" onclick="logoutClient()"><i class="fas fa-sign-out-alt"></i> Keluar</button>
+            </div>
+
+            <div class="dash-grid">
+                <!-- Status & Paket -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <i class="fas fa-wifi icon-dash"></i>
+                        <h4>Status Berlangganan</h4>
+                    </div>
+                    <div class="status-badge active" id="dashStatusTag">AKTIF</div>
+                    <div class="dash-info-list">
+                        <p><strong>Paket:</strong> <span id="dashPaket">PELANGI Prime (7 Mbps)</span></p>
+                        <p><strong>IP Address:</strong> <span id="dashIP">10.20.0.105</span></p>
+                        <p><strong>Jatuh Tempo:</strong> <span id="dashJatuhTempo">28 Juli 2026</span></p>
+                    </div>
+                </div>
+
+                <!-- Pembayaran Online -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <i class="fas fa-file-invoice-dollar icon-dash"></i>
+                        <h4>Tagihan Bulan Ini</h4>
+                    </div>
+                    <div class="price-tag" id="dashTagihan">Rp 150.000</div>
+                    <p class="text-sub">Status: <span id="statusBayar" class="text-unpaid">Belum Dibayar</span></p>
+                    <button class="btn-card mt-15" onclick="prosesBayarOnline()">Bayar Online Sekarang <i class="fas fa-credit-card"></i></button>
+                </div>
+
+                <!-- Ubah Password Modem (MixRadius Integration) -->
+                <div class="dash-card full-width">
+                    <div class="dash-card-header">
+                        <i class="fas fa-key icon-dash"></i>
+                        <h4>Ubah Kata Sandi Wi-Fi Modem</h4>
+                    </div>
+                    <p class="text-sub">Perubahan password akan langsung dikirimkan ke perangkat modem Anda melalui sistem MixRadius.</p>
+                    
+                    <form id="formGantiPassWifi" onsubmit="prosesGantiPassWifi(event)" class="form-wifi">
+                        <div class="form-group-inline">
+                            <div class="form-group">
+                                <label>SSID / Nama Wi-Fi</label>
+                                <input type="text" id="wifiSSID" value="PELANGINET_BUDI" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Kata Sandi Wi-Fi Baru</label>
+                                <input type="password" id="wifiPasswordBaru" placeholder="Minimal 8 karakter" minlength="8" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit btn-accent"><i class="fas fa-sync"></i> Perbarui Password Wi-Fi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER (BACKGROUND PUTIH) -->
 <footer class="footer">
     <div class="container footer-grid">
         <div class="foot-col">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo PELANGINET" class="logo-img">
-                Pelagi<span>Media</span>Data</span>
+                PELANGI<span>NET</span>
             </div>
             <p style="margin-top: 15px;">Memberikan layanan internet terbaik untuk masa depan digital Anda.</p>
         </div>
@@ -258,12 +362,14 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 Pelangi Media Data. All rights reserved.</p>
+        <p>&copy; 2026 PELANGINET Network. All rights reserved.</p>
     </div>
 </footer>
 
+<!-- FLOATING WA BUTTON -->
 <a href="https://wa.me/6285715708144" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+<!-- MODAL POPUP IKLAN -->
 <div id="modalIklan" class="modal-overlay">
     <div class="modal-content-iklan">
         <button class="close-iklan" onclick="tutupIklan()">&times;</button>
